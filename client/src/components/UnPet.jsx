@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, {useState,useEffect} from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 // import Pet from '../../../server/models/pet.model'
+import Navbar from'../components/Navbar'
 
 const UnaSerie = () => {   
      // edicion de objeto-documento
@@ -32,6 +33,7 @@ const UnaSerie = () => {
 
   return (
     <div className='col-6 mx-auto'>
+             <Navbar/>
         
         <img src={pet.petname1} className="col col-4 mx-auto" />
         <h3>Detalles de la mascota</h3>

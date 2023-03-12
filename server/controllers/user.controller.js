@@ -16,31 +16,6 @@ module.exports = {
             res.status(401).json(error)
         }
     },
-
-    // loginUsuario: async (req, res)=>{
-    //     const usuario = await Usuario.findOne({email:req.body.email})
-    //     console.log(" El usuario que intenta ingresar es:", usuario )
-    //     if(!usuario){
-    //         res.status(400).json({error: "Email/Password incorrecto"})
-    //     }
-    //     try{
-    //         const passwordValida = await bcrypt.compare(req.body.password, usuario.password )
-    //         .then(password => {
-
-    //         })
-    //         console.log(passwordValida, " PASSWORD VALIDA")
-    //         if(!passwordValida){
-    //             res.status(400).json({error: "Email/Password incorrecto"})
-    //         }else{
-    //          const userToken = jwt.sign({_id:usuario._id}, SECRET)
-    //          res.status(201).cookie('userToken', userToken, {httpOnly:true, expires:new Date(Date.now() + 90000)})
-    //         }
-
-    //     }catch(error){
-    //         res.status(400).json({error: "Email/Password incorrecto"})
-    //     }
-    // },
-
     loginUsuario: async (req, res)=>{
         Usuario.findOne({ email: req.body.email }) //find the user with the email
         .then(user => {

@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import axios from 'axios'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate,Link} from 'react-router-dom'
 
 const Registro = () => {
 
@@ -25,8 +25,12 @@ const Registro = () => {
         })
     }
   return (
+<div>
+        <h1 className=''> Pet Shelter 😺🐶</h1> 
+        <br />
     <div>
         <form onSubmit={submitHandler} className='col-6 mx-auto'>
+            
             <label htmlFor=""  className='form-label'>Nombre:</label>
             <input type="text" className='form-control' onChange={(e)=>setNombre(e.target.value)}/>
             <label htmlFor=""  className='form-label'>Apellido:</label>
@@ -37,9 +41,13 @@ const Registro = () => {
             <input type="password" className='form-control'onChange={(e)=>setPassword(e.target.value)}/>
             <label htmlFor="" className='form-label'> Confirm Password</label>
             <input type="password" className='form-control'onChange={(e)=>setConfirmPassword(e.target.value)}/>
+            
             <button className='btn btn-success mt-3'> Registrate!!!</button>
+
+            <p> Ya posees con un Usuario?<Link to='/' > Accede Aqui...</Link> </p>  
         </form>
     </div>
+</div>
   )
 }
 

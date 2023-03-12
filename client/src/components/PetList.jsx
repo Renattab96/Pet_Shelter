@@ -1,6 +1,7 @@
 import React, {useEffect,useState} from 'react'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
+import Navbar from '../components/Navbar'
 
 const PetList = () => {
     const [lista, setLista] = useState([])
@@ -16,7 +17,9 @@ const PetList = () => {
     }, [])
 
   return (
-    <div className='d-flex flex-wrap mt-5'>
+    <div>
+        <Navbar/>
+           <div className='d-flex flex-wrap mt-5'>
         {
             lista.map((petname1, indice)=>(
                 <div key={indice}>
@@ -28,6 +31,8 @@ const PetList = () => {
         }
 
     </div>
+    </div>
+ 
   )
 }
 
