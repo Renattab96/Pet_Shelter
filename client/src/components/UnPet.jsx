@@ -44,8 +44,8 @@ const UnaSerie = () => {
                 <p> Habilidad 3: {pet.skill3}</p>
                 <h3>3 like(s)</h3>
                 <button className='likebtn' id="like">Like</button>
-                <Link to={`/editarpet/${id}`}> Editar Pet</Link>
-                <button className="btn btn-danger" onClick={deleteHandler}>Delete Pet</button>
+                <Link className='mx-2' to={`/editarpet/${id}`}> Editar Pet</Link>
+                <button className="btn btn-danger mx-2" onClick={deleteHandler}>Delete Pet</button>
             </div>
         </div>
     )
