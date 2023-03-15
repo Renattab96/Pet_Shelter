@@ -30,8 +30,8 @@ const PetList = () => {
                 <Row>
                     {
                         lista.map((petname1, indice)=>(
-                        <Col md={4}>
-                            <div key={indice} className="mascota">
+                        <Col md={4} key={indice}>
+                            <div  className="mascota">
                                 <h2>{petname1.pettype}</h2>
                                 <Link to={`/unpet/${petname1._id}`} className="d-block"> Mas Info </Link>
                                 <img src={petname1.add} className="col col-4"/>
