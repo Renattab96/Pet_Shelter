@@ -1,4 +1,4 @@
-## se tomo como base el proyecto de uno de los integrantes (Angela) , y se procedio a la mejora gracias a los participantes (Renatta , David Y José)
+
 ## Para correr esta aplicación:
 ### Server
 - cd server
@@ -8,3 +8,4 @@
 - cd client
 - npm install
 - npm start
+## Se tomo como base el proyecto de uno de los integrantes (Angela) , y se procedio a la mejora gracias a los participantes (Renatta , David Y José)
