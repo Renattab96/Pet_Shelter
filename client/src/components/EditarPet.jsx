@@ -56,35 +56,35 @@ const EditarPet = () => {
                     <h1> Pet Shelter - Edit </h1>
                     <form className="formPet" onSubmit={submitHandler}>
 
-                        <label htmlFor="" className='form-label'>Pet Name</label>
+                        <label htmlFor="" className='form-label'>Nombre de Mascota</label>
                         <input type="text" className='form-control' value={petname1} onChange={(e) => setName1(e.target.value)} />
                         {errors.petname1 ? <span className='text-danger'> {errors.petname1.message}</span> : null}<br></br>
 
-                        <label htmlFor="" className='form-label'>Pet Type</label>
+                        <label htmlFor="" className='form-label'>Tipo de Mascota</label>
                         <input type="text" className='form-control' value={pettype} onChange={(e) => setType(e.target.value)} />
                         {errors.pettype ? <span className='text-danger'>{errors.pettype.message} </span> : null} <br />
 
-                        <label htmlFor="" className='form-label'>Pet Description </label>
+                        <label htmlFor="" className='form-label'>Descripcion de Mascota</label>
                         <input type="text" className='form-control' value={petdescription} onChange={(e) => setDescription(e.target.value)} />
                         {errors.petdescription ? <span className='text-danger'>{errors.petdescription.message} </span> : null} <br />
 
-                        <label htmlFor="" className='form-label'>Skill 1 </label>
+                        <label htmlFor="" className='form-label'>Habilidad 1 </label>
                         <input type="text" className='form-control' value={skill1} onChange={(e) => setSkill1(e.target.value)} />
                         {errors.skill1 ? <span className='text-danger'>{errors.skill1.message} </span> : null} <br />
 
-                        <label htmlFor="" className='form-label'>Skill 2 </label>
+                        <label htmlFor="" className='form-label'>Habilidad 2 </label>
                         <input type="text" className='form-control' value={skill2} onChange={(e) => setSkill2(e.target.value)} />
                         {errors.skill2 ? <span className='text-danger'>{errors.skill2.message} </span> : null} <br />
 
-                        <label htmlFor="" className='form-label'>Skill 3 </label>
+                        <label htmlFor="" className='form-label'>Habilidad 3 </label>
                         <input type="text" className='form-control' value={skill3} onChange={(e) => setSkill3(e.target.value)} />
                         {errors.skill3 ? <span className='text-danger'>{errors.skill3.message} </span> : null} <br />
 
-                        <label htmlFor="" className='form-label'>Add Image Pet URL</label>
+                        <label htmlFor="" className='form-label'>Agrear una URL de una imagen</label>
                         <input type="text" className='form-control' value={add} onChange={(e) => setAdd(e.target.value)} />
                         {errors.creador ? <span className='text-danger'>{errors.add.message} </span> : null} <br />
 
-                        <button className='btn btn-outline-primary'> Update Pet</button>
+                        <button className='btn btn-outline-primary'> Actualizar Mascota</button>
 
                     </form>
                     <Link to="/todospet"> Volver al Inicio 🏠 </Link>  &nbsp; &nbsp;

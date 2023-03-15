@@ -45,7 +45,7 @@ const Registro = () => {
             <div className='form-container'>
                 <form onSubmit={submitHandler} className="formclass" action="#" >
                     <div>
-                        <p className='regText'> Ya tienes cuenta <Link to='/'><span>  Accede </span></Link></p>
+                        <p className='regText mx-2'> Ya tienes cuenta <Link to='/'><span className='mx-2'>  Accede </span></Link></p>
                     </div>
                     <div className='nameDiv'>
                         {/* <label htmlFor=""  className='rlabel'>Nombre:</label> */}

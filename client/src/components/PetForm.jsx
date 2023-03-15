@@ -42,10 +42,10 @@ const PetForm = () => {
             <div className='App contenido'>
                 <Navbar />
                 <div className="col-6 mx-auto">
-                    <h2> Know a pet needing a home? </h2>
+                    <h2> ¿Sabrías de alguna mascota que necesita un hogar? </h2>
                     <form className="formPet" onSubmit={submitHandler}>
                         <label htmlFor="" className="form-label">
-                            Pet Name
+                            Nombre de la mascota
                         </label>
                         <input
                             type="text"
@@ -57,7 +57,7 @@ const PetForm = () => {
                         ) : null}
                         <br></br>
                         <label htmlFor="" className="form-label">
-                            Pet Type
+                            Tipo de Mascota
                         </label>
                         <input
                             type="text"
@@ -69,7 +69,7 @@ const PetForm = () => {
                         ) : null}{" "}
                         <br />
                         <label htmlFor="" className="form-label">
-                            Pet Description{" "}
+                            Descripcion de la mascota{" "}
                         </label>
                         <input
                             type="text"
@@ -83,7 +83,7 @@ const PetForm = () => {
                         ) : null}{" "}
                         <br />
                         <label htmlFor="" className="form-label">
-                            Skill 1{" "}
+                            Habilidad 1{" "}
                         </label>
                         <input
                             type="text"
@@ -95,7 +95,7 @@ const PetForm = () => {
                         ) : null}{" "}
                         <br />
                         <label htmlFor="" className="form-label">
-                            Skill 2{" "}
+                            Habilidad 2{" "}
                         </label>
                         <input
                             type="text"
@@ -107,7 +107,7 @@ const PetForm = () => {
                         ) : null}{" "}
                         <br />
                         <label htmlFor="" className="form-label">
-                            Skill 3{" "}
+                            Habilidad 3{" "}
                         </label>
                         <input
                             type="text"
@@ -119,7 +119,7 @@ const PetForm = () => {
                         ) : null}{" "}
                         <br />
                         <label htmlFor="" className="form-label">
-                            Add Image Pet URL
+                            Agregar una URL de la imagen
                         </label>
                         <input
                             type="text"
@@ -130,7 +130,7 @@ const PetForm = () => {
                             <span className="text-danger">{errors.add.message} </span>
                         ) : null}{" "}
                         <br />
-                        <button className="btn btn-outline-primary"> Add Pett</button>
+                        <button className="btn btn-outline-primary"> Agregar Mascota</button>
                     </form>
                 </div>
             </div>
