@@ -25,26 +25,26 @@ const Login = () => {
                 console.log(err)
             })
     }
- 
+
 
 
     return (
         <div className='bg-image'>
 
             <header>
-            <h2 className='logo' >Pet Shelter</h2>
+                <h2 className='logo' >Pet Shelter</h2>
             </header>
             <div className='form-container'>
                 <form onSubmit={submitHandler} className="formclass" action="#" >
-                   
+
                     <div className="userDiv">
                         {/* <label htmlFor="" className='flabel'>Email:</label> */}
-                        <input type="text" className='form-control' onChange={(e) => setEmail(e.target.value)} placeholder='Introduzca su email'/>
+                        <input type="text" className='form-control' onChange={(e) => setEmail(e.target.value)} placeholder='Introduzca su email' />
                     </div>
                     <div className='passDiv'>
-                 
-                        <input type="password" className='form-control' onChange={(e) => setPassword(e.target.value)} placeholder='Introduzca su Contrasena'/>
-                        
+
+                        <input type="password" className='form-control' onChange={(e) => setPassword(e.target.value)} placeholder='Introduzca su Contrasena' />
+
                     </div>
                     <div className='btnDiv' >
                         <button>Login</button>
