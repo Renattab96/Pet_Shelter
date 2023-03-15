@@ -4,7 +4,6 @@ import { useNavigate, Link } from 'react-router-dom'
 import '../style/registro.css';
 
 const Registro = () => {
-
     const [nombre, setNombre] = useState('')
     const [apellido, setApellido] = useState('')
     const [email, setEmail] = useState('')
@@ -12,7 +11,7 @@ const Registro = () => {
     const [confirmPassword, setConfirmPassword] = useState('')
     const [showLabel, setShowLabel] = useState(false);
     const [showLabel2, setShowLabel2] = useState(false);
-
+    
     const navigate = useNavigate()
 
     const validatePassword = (e) => e.target.value.length < 8
@@ -30,6 +29,7 @@ const Registro = () => {
         }, { withCredentials: true })
             .then((res) => {
                 console.log(res)
+                alert("Te has registrado con éxito!!")
                 navigate('/')
             }).catch((err) => {
                 console.log(err)
@@ -39,7 +39,6 @@ const Registro = () => {
     return (
         // <div className='app'></div>
         <div className='bg-image'>
-
             <header>
                 <h2 className="logo" >Pet Shelter</h2>
             </header>
@@ -65,14 +64,14 @@ const Registro = () => {
                         <input type="password" className='form-control' onBlur={validatePassword} onChange={(e) => setPassword(e.target.value)} placeholder='Ingrese su password' />
                     </div>
                     {showLabel === true && (
-                        <label htmlFor='passwordmessage' className='text-danger'>*Password should be at least 8 characters</label>
+                        <label htmlFor='passwordmessage' className='text-danger'>*La contraseña tiene que tener al menos 8 caracteres</label>
                     )}
                     <div className='passConfirDiv'>
                         {/* <label htmlFor="" className='rlabel'> Confirm Password</label> */}
                         <input type="password" className='form-control' onBlur={validateBothPasswords} onChange={(e) => setConfirmPassword(e.target.value)} placeholder='Ingrese nuevamente su password' />
                     </div>
                     {showLabel2 === true && (
-                        <label htmlFor='notmatchpassword' className='text-danger'>*Passwords do not match!</label>
+                        <label htmlFor='notmatchpassword' className='text-danger'>*Las contraseñas no coinciden!</label>
                     )}
                     <div className='btnDiv'>
                         <button className='btn-register' > Registrate!!!</button>
