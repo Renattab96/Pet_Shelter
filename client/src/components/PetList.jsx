@@ -20,28 +20,28 @@ const PetList = () => {
             })
     }, [])
 
-    return (
-        <div className='bg-image'>
-            <div className='App contenido'>
-                <Navbar />
-                <Container>
-                    <Row>
-                        {
-                            lista.map((petname1, indice) => (
-                                <Col md={4}>
-                                    <div key={indice} className="mascota">
-                                        <h2>{petname1.petname1}</h2>
-                                        <Link to={`/unpet/${petname1._id}`} className="d-block"> Mas Info </Link>
-                                        <img src={petname1.add} className="col col-4" />
-                                    </div>
-                                </Col>
-                            ))
-                        }
-                    </Row>
-                </Container>
-            </div>
+return (
+    <div className='bg-image'>
+        <div  className='App contenido'>
+            <Navbar/>
+            <Container>
+                <Row>
+                    {
+                        lista.map((petname1, indice)=>(
+                        <Col md={4}>
+                            <div key={indice} className="mascota">
+                                <h2>{petname1.pettype}</h2>
+                                <Link to={`/unpet/${petname1._id}`} className="d-block"> Mas Info </Link>
+                                <img src={petname1.add} className="col col-4"/>
+                            </div>
+                        </Col>
+                        ))
+                    }
+                </Row>
+            </Container>
         </div>
-    )
+    </div>
+)
 }
 
 export default PetList
