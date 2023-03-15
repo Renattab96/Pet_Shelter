@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import'../style/App.css'
+
 
 const PetForm = () => {
     const [petname1, setName] = useState("");
@@ -36,7 +38,7 @@ const PetForm = () => {
     };
 
     return (
-        <div>
+        <div className='App contenido'>
             <Navbar />
             <div className="col-6 mx-auto">
                 <h2> Know a pet needing a home? </h2>

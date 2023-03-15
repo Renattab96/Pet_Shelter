@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, {useState,useEffect} from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
+import'../style/App.css'
 
 
 const EditarPet= () => {
@@ -51,8 +52,8 @@ const EditarPet= () => {
     }
 
     return (
-
-        <div className='col-6 mx-auto'>
+        <div  className='App contenido'> 
+                <div className='col-6 mx-auto' >
             <h1> Pet Shelter - Edit </h1>
             <form onSubmit={submitHandler}>
     
@@ -90,6 +91,9 @@ const EditarPet= () => {
         
             </form>
         </div>
+        </div>
+
+
      )
 
 

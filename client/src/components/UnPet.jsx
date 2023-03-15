@@ -1,9 +1,10 @@
 import axios from 'axios'
+
 import React, {useState,useEffect} from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 // import Pet from '../../../server/models/pet.model'
 import Navbar from'../components/Navbar'
-
+import'../style/App.css'
 const UnaSerie = () => {   
      // edicion de objeto-documento
      const [pet, setPet] = useState({})
@@ -32,7 +33,7 @@ const UnaSerie = () => {
 
 
   return (
-    <div className='col-6 mx-auto'>
+    <div className='app contenido'>
              <Navbar/>
         
         <img src={pet.petname1} className="col col-4 mx-auto" />
@@ -46,7 +47,7 @@ const UnaSerie = () => {
         <p> Imagen: {pet.add}</p>
         
             <h3>3 like(s)</h3>
-            <button class="likebtn" id="like">Like</button>
+            <button className='likebtn' id="like">Like</button>
          
 
         <Link to={`/editarpet/${id}`}> Editar Pet</Link>

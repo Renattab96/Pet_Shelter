@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import axios from 'axios'
 import {useNavigate,Link} from 'react-router-dom'
+import '../style/registro.css';
 
 const Registro = () => {
 
@@ -19,32 +20,46 @@ const Registro = () => {
         }, {withCredentials:true})
         .then((res)=>{
             console.log(res)
-            navigate('/PetForm')
+            navigate('/j')
         }).catch((err)=>{
             console.log(err)
         })
     }
   return (
-<div>
-        <h1 className=''> Pet Shelter 😺🐶</h1> 
-        <br />
-    <div>
-        <form onSubmit={submitHandler} className='col-6 mx-auto'>
-            
-            <label htmlFor=""  className='form-label'>Nombre:</label>
-            <input type="text" className='form-control' onChange={(e)=>setNombre(e.target.value)}/>
-            <label htmlFor=""  className='form-label'>Apellido:</label>
-            <input type="text" className='form-control' onChange={(e)=>setApellido(e.target.value)}/>
-            <label htmlFor="" className='form-label'>Email:</label>
-            <input type="text" className='form-control'onChange={(e)=>setEmail(e.target.value)}/>   
-            <label htmlFor="" className='form-label'> Password</label>
-            <input type="password" className='form-control'onChange={(e)=>setPassword(e.target.value)}/>
-            <label htmlFor="" className='form-label'> Confirm Password</label>
-            <input type="password" className='form-control'onChange={(e)=>setConfirmPassword(e.target.value)}/>
-            
-            <button className='btn btn-success mt-3'> Registrate!!!</button>
+    // <div className='app'></div>
+    <div className='bg-image'>
 
-            <p> Ya posees con un Usuario?<Link to='/' > Accede Aqui...</Link> </p>  
+    <header>
+    <h2 className="logo" >Pet Shelter</h2>
+    </header>
+    <div className='form-container'>
+        <form onSubmit={submitHandler}  className="formclass" action="#" >
+            <div>
+            <p className='regText'> Ya tienes cuenta <Link to='/'><span>  Accede </span></Link></p>
+            </div>
+            <div className='nameDiv'>
+            {/* <label htmlFor=""  className='rlabel'>Nombre:</label> */}
+            <input type="text" className='form-control' onChange={(e)=>setNombre(e.target.value)}placeholder='Ingrese su nombre'/>
+            </div>
+            <div className='lastnameDiv'>
+            {/* <label htmlFor=""  className='rlabel'>Apellido:</label> */}
+            <input type="text" className='form-control' onChange={(e)=>setApellido(e.target.value)}placeholder='Ingrese su Apellido'/>
+            </div>
+            <div className='mailDiv'>
+            {/* <label htmlFor="" className='rlabel'>Email:</label> */}
+            <input type="text" className='form-control'onChange={(e)=>setEmail(e.target.value)}placeholder='Ingrese su email'/>
+            </div>
+            <div className='passDiv'>
+            {/* <label htmlFor="" className='rlabel'> Password</label> */}
+            <input type="password" className='form-control'onChange={(e)=>setPassword(e.target.value)}placeholder='Ingrese su password'/>
+            </div>
+            <div className='passConfirDiv'>
+            {/* <label htmlFor="" className='rlabel'> Confirm Password</label> */}
+            <input type="password" className='form-control'onChange={(e)=>setConfirmPassword(e.target.value)} placeholder='Ingrese nuevamente su password'/>
+            </div>
+            <div  className='btnDiv'>
+            <button className='btn-register' > Registrate!!!</button>
+            </div>           
         </form>
     </div>
 </div>

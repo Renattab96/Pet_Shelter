@@ -2,6 +2,7 @@ import React, {useEffect,useState} from 'react'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import'../style/App.css'
 
 const PetList = () => {
     const [lista, setLista] = useState([])
@@ -17,7 +18,7 @@ const PetList = () => {
     }, [])
 
   return (
-    <div>
+    <div  className='App contenido'>
         <Navbar/>
            <div className='d-flex flex-wrap mt-5'>
         {
