@@ -20,7 +20,7 @@ const Registro = () => {
         }, {withCredentials:true})
         .then((res)=>{
             console.log(res)
-            navigate('/j')
+            navigate('/')
         }).catch((err)=>{
             console.log(err)
         })

@@ -33,10 +33,11 @@ const UnaSerie = () => {
 
 
   return (
-    <div className='app contenido'>
+    <div className='bg-image'>
+        <div className='app contenido'>
              <Navbar/>
         
-        <img src={pet.petname1} className="col col-4 mx-auto" />
+        <img src={pet.add} className="col col-4 mx-auto" />
         <h3>Detalles de la mascota</h3>
         <p> Nombre de la mascota : {pet.petname1}</p>
         <p> Tipo: {pet.pettype}</p>
@@ -54,6 +55,8 @@ const UnaSerie = () => {
         <button className="btn btn-danger" onClick={deleteHandler}>Delete Pet</button>
 
     </div>
+    </div>
+    
   )
 }
 

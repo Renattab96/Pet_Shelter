@@ -21,7 +21,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className=''>
+    <div className='navBar'>
         <Link to="/todospet"> Pagina de inicio  🏠</Link>  &nbsp; &nbsp;
         <Link to="/nuevopet"> Agregar Mascota 🐹 </Link>&nbsp;&nbsp;
         <Link to="/" onClick={handleLogout}>  Salir 🔒</Link>

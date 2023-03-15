@@ -38,11 +38,12 @@ const PetForm = () => {
     };
 
     return (
-        <div className='App contenido'>
+        <div className="bg-image">
+             <div className='App contenido'>
             <Navbar />
             <div className="col-6 mx-auto">
                 <h2> Know a pet needing a home? </h2>
-                <form onSubmit={submitHandler}>
+                <form className="formPet" onSubmit={submitHandler}>
                     <label htmlFor="" className="form-label">
                         Pet Name
                     </label>
@@ -133,6 +134,8 @@ const PetForm = () => {
                 </form>
             </div>
         </div>
+        </div>
+       
     );
 };
 

@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, {useState,useEffect} from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 import'../style/App.css'
 
 
@@ -52,10 +52,12 @@ const EditarPet= () => {
     }
 
     return (
-        <div  className='App contenido'> 
+        
+        <div className='bg-image'>
+            <div  className='App contenido'> 
                 <div className='col-6 mx-auto' >
             <h1> Pet Shelter - Edit </h1>
-            <form onSubmit={submitHandler}>
+            <form className="formPet" onSubmit={submitHandler}>
     
                 <label htmlFor=""  className='form-label'>Pet Name</label>
                 <input type="text" className='form-control' value={petname1} onChange={(e)=>setName1(e.target.value)}/>
@@ -86,12 +88,15 @@ const EditarPet= () => {
                 <input type="text" className='form-control' value={add} onChange={(e)=>setAdd(e.target.value)}/>
                 {errors.creador ? <span className='text-danger'>{errors.add.message} </span>: null} <br />
     
-                <button className='btn btn-outline-primary'> Update Pett</button>
+                <button className='btn btn-outline-primary'> Update Pet</button>
     
         
             </form>
+            <Link to="/todospet"> Volver al Inicio 🏠 </Link>  &nbsp; &nbsp;
         </div>
         </div>
+        </div>
+        
 
 
      )
